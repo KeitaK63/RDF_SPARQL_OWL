@@ -8,7 +8,7 @@
 'pip install Owlready2'
 
 from owlready2 import *
-onto = get_ontology("http://test.org/onto.owl")
+onto = get_ontology("http://test1.org/onto.owl")
 
 with onto:
     #エンティティクラス
@@ -16,7 +16,7 @@ with onto:
         pass
     class MeatPizza(Pizza):
         pass
-    
+
     class Topping(Thing):
         pass
 
@@ -24,4 +24,17 @@ with onto:
     class has_Topping(Pizza >> Topping):
         pass
 
+
+print(Pizza)
+
+'The .subclasses() method returns the list of direct subclasses of a class.'
+print(Pizza.subclasses())
+
+'Owlready2 provides the .is_a attribute for getting the list of superclasses'
+print(MeatPizza.is_a)
+
+'The .descendants() and .ancestors() Class methods return a set of the descendant and ancestor Classes.'
+print(MeatPizza.ancestors())
+
+'The .iri attribute of the Class can be used to obtain the full IRI of the class.'
 print(Pizza.iri)
