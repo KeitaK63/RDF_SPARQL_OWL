@@ -13,6 +13,12 @@
   <rdfs:range rdf:resource="#Topping"/>
 </owl:ObjectProperty>
 
+<owl:Class rdf:about="#Pizza">
+  <owl:disjointWith rdf:resource="#Topping"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Topping"/>
+
 <owl:Class rdf:about="#CheeseTopping">
   <rdfs:subClassOf rdf:resource="#Topping"/>
 </owl:Class>
@@ -25,15 +31,9 @@
   <rdfs:subClassOf rdf:resource="#Topping"/>
 </owl:Class>
 
-<owl:Class rdf:about="#Pizza">
-  <owl:disjointWith rdf:resource="#Topping"/>
-</owl:Class>
-
 <owl:Class rdf:about="#TomatoTopping">
   <rdfs:subClassOf rdf:resource="#Topping"/>
 </owl:Class>
-
-<owl:Class rdf:about="#Topping"/>
 
 <owl:Class rdf:about="#NonVegetarianPizza">
   <rdfs:subClassOf rdf:resource="#Pizza"/>
@@ -60,9 +60,9 @@
 
 <Pizza rdf:about="#test_pizza_owl_identifier">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <has_topping rdf:resource="#cheesetopping1"/>
-  <has_topping rdf:resource="#tomatotopping1"/>
-  <has_topping rdf:resource="#meattopping1"/>
+  <has_topping rdf:resource="#tomatotopping2"/>
+  <has_topping rdf:resource="#cheesetopping2"/>
+  <has_topping rdf:resource="#meattopping2"/>
 </Pizza>
 
 <CheeseTopping rdf:about="#cheesetopping1">
@@ -74,6 +74,18 @@
 </TomatoTopping>
 
 <MeatTopping rdf:about="#meattopping1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</MeatTopping>
+
+<CheeseTopping rdf:about="#cheesetopping2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</CheeseTopping>
+
+<TomatoTopping rdf:about="#tomatotopping2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</TomatoTopping>
+
+<MeatTopping rdf:about="#meattopping2">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </MeatTopping>
 
