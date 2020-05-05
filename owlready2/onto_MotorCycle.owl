@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://./RDF_SPARQL_OWL/owlready2/onto_MotorCycle.owl"
+         xmlns="file://./RDF_SPARQL_OWL/owlready2/onto_MotorCycle.owl#">
+
+<owl:Ontology rdf:about="file://./RDF_SPARQL_OWL/owlready2/onto_MotorCycle.owl"/>
+
+<owl:Class rdf:about="#Vehicle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TowWheeledVehicle">
+  <rdfs:subClassOf rdf:resource="#Vehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MotorCycle">
+  <rdfs:subClassOf rdf:resource="#TowWheeledVehicle"/>
+</owl:Class>
+
+
+</rdf:RDF>
